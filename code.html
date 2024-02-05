@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon"  href="download.png">
 </head>
-<body>
+<body class="container">
     <h1 style="color: blue; text-align:center;">WELCOME TO MY PAGE</h1>
     <h2>CODE QUEEN TRIALS</h2>
     <h3>ITS MY FIRST TIME  HERE</h3>
@@ -14,8 +15,8 @@
     <h6>FOR THE BEST</h6>
     <p>boonabaanaessie</p>
 
-    <img src="https://media.gettyimages.com/id/517381843/photo/woman-swimming-freestyle.jpg?s=612x612&w=gi&k=20&c=Ne0QDoI_87YoeXJvxKBmWm5R5xKdH_xqX0zXK7iNz-s=">
-   <div style="background-color: khaki; width: 20%;">
+    <img class="image" src="https://media.gettyimages.com/id/517381843/photo/woman-swimming-freestyle.jpg?s=612x612&w=gi&k=20&c=Ne0QDoI_87YoeXJvxKBmWm5R5xKdH_xqX0zXK7iNz-s=">
+   <div style="background-color: khaki; width: 2 0%;">
         <ul style="color: aqua;">
             <li>sleeping</li>
             <li>listening to music</li>
@@ -35,7 +36,7 @@
     <a href="https://cafejavas.co.ug/" target="_blank">food</a>
 
     <p style="color: rgb(219, 128, 8);"> JANNY'S DAILY EATING TABLE</p>
-    <table style="color:darkgreen; border:2px solid black; border-collapse: collapse;">
+    <table>
         <thead>
             <th>food type</th>
             <th>quantity</th>
@@ -60,14 +61,67 @@
 
         </tbody>
     </table>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4OlAgUrLmjnEjFDBkBccQQg08FKxmn565G1ngvyZPig&s" >
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4OlAgUrLmjnEjFDBkBccQQg08FKxmn565G1ngvyZPig&s" ><br>
+
+    <a href="https://www.instagram.com/kfcug/?hl=en">
+        <img src="download (1).jpeg" alt="link to instagram" width="30px" >
+    </a>
+
 </body>
 <style>
-    th{
+    .container{
+        background-color: rgb(190, 219, 210);
+        
+    }
+    .image{
+        width: 30%;
+    }
+    div{
+        width: 30%;
+    }
+    table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 16px;
+        text-align: left;
         border: 1px solid black;
     }
-    tr{
+
+
+    th, td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
         border: 1px solid black;
     }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    td {
+        padding-left: 15px;
+    }
+    td:first-child {
+        font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+        table {
+            font-size: 14px;
+        }
+        th, td {
+            padding: 10px;
+        }
+    }
+
 </style>
 </html>
