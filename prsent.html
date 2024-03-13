@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up Form</title>
+<style>
+    /* CSS styles for the form and its elements */
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Sign Up</h2>
+    <!-- Sign Up Form -->
+    <form id="signupForm">
+        <!-- Username Field -->
+        <label for="username">Username:</label>
+        <!-- Input field for username -->
+        <input type="text" id="username" name="username" required>
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <!-- Input field for email -->
+        <input type="email" id="email" name="email" required>
+        <!-- Password Field -->
+        <label for="password">Password:</label>
+        <!-- Input field for password -->
+        <input type="password" id="password" name="password" required>
+        <!-- Submit Button -->
+        <input type="submit" value="Sign Up">
+    </form>
+</div>
+
+<script>
+    // Event listener for form submission
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+        // Prevent default form submission
+        event.preventDefault();
+        // Retrieve form data
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        // Alert form data
+        alert(`Signing up ${username} with email ${email} and password ${password}`);
+        // You can add code here to send the form data to a server
+    });
+
+    // Event listener for mouseover on username field
+    document.getElementById('username').addEventListener('mouseover', function() {
+        // Log message to console
+        console.log('Mouse over the username field');
+    });
+
+    // Event listener for click on password field
+    document.getElementById('password').addEventListener('click', function() {
+        // Log message to console
+        console.log('Clicked on the password field');
+    });
+</script>
+
+</body>
+</html>

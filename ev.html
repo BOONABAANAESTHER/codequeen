@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document and Window Events Example</title>
+<style>
+    /* CSS styles for the container */
+    .container {
+        width: 100%;
+        height: 2000px; /* To create scrollable content */
+        background-color: #f0f0f0;
+        text-align: center;
+    }
+    /* CSS styles for the box */
+    .box {
+        width: 200px;
+        height: 100px;
+        background-color: #3498db;
+        color: white;
+        line-height: 100px;
+        margin: 20px auto;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Window Events Example</h2>
+    <div class="box" id="box">Resize Me!</div>
+</div>
+
+<script>
+    // Window event: DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOMContentLoaded event triggered');
+    });
+
+    // Window event: load
+    window.addEventListener('load', function() {
+        console.log('Load event triggered');
+    });
+
+    // Window event: resize
+    window.addEventListener('resize', function() {
+        console.log('Window resized');
+        // Update box content with window size
+        document.getElementById('box').textContent = `Window Size: ${window.innerWidth}px x ${window.innerHeight}px`;
+    });
+
+    // Window event: scroll
+    window.addEventListener('scroll', function() {
+        console.log('Scrolled');
+    });
+</script>
+
+</body>
+</html>

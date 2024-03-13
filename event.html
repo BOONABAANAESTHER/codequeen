@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>events</title>
+<link rel="stylesheet" href="event.css">
+</head>
+<body>  
+
+<div class="event">
+        <!-- Image with mouseover effect -->
+    <img id="hoverImage" src="iimages/elephant.jpeg" alt="Placeholder Image">
+    <!-- Button with click event -->
+    <button id="clickButton">Click Me!</button>
+
+    <p>Press the 'k' key to trigger an action.</p>
+
+    <div class="container">
+        <h2>Sign Up</h2>
+        <!-- Sign Up Form -->
+        <form id="signupForm">
+            <!-- Username Field -->
+            <label for="username">Username:</label>
+            <!-- Input field for username -->
+            <input type="text" id="username" name="username" required>
+            <!-- Email Field -->
+            <label for="email">Email:</label>
+            <!-- Input field for email -->
+            <input type="email" id="email" name="email" required>
+            <!-- Password Field -->
+            <label for="password">Password:</label>
+            <!-- Input field for password -->
+            <input type="password" id="password" name="password" required>
+            <!-- Submit Button -->
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+
+</div>
+
+
+
+<script>
+
+
+    // JavaScript code for mouseover event
+    document.getElementById('hoverImage').addEventListener('mouseover', function() {
+        // When mouse is over the image, scale it up slightly
+        this.style.transform = 'scale(1.1)';
+    });
+
+    // JavaScript code for mouseout event
+    document.getElementById('hoverImage').addEventListener('mouseout', function() {
+        // When mouse leaves the image, reset its scale
+        this.style.transform = 'scale(1)';
+    });
+
+
+        // JavaScript code for click event
+        document.getElementById('clickButton').addEventListener('click', function() {
+        // When the button is clicked, change its text and background color
+        this.textContent = 'Clicked!';
+        this.style.backgroundColor = 'green';
+
+        alert('Button clicked!');
+    });
+
+     // JavaScript code for keydown event
+     document.addEventListener('keydown', function(event) {
+        // Check if the pressed key is 'k'
+        if (event.key === 'k') {
+            // If 'k' key is pressed, display an alert
+            alert('You pressed the "k" key!');
+        }
+    });
+
+
+     // Event listener for form submission
+     document.getElementById('signupForm').addEventListener('submit', function(event) {
+        // Prevent default form submission
+        event.preventDefault();
+        // Retrieve form data
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        // Alert form data
+        alert(`Signing up ${username} with email ${email} and password ${password}`);
+        // You can add code here to send the form data to a server
+    });
+
+    // Event listener for mouseover on username field
+    document.getElementById('username').addEventListener('mouseover', function() {
+        // Log message to console
+        console.log('Mouse over the username field');
+    });
+
+    // Event listener for click on password field
+    document.getElementById('password').addEventListener('click', function() {
+        // Log message to console
+        console.log('Clicked on the password field');
+    });
+</script>
+
+</body>
+</html>
